@@ -4,6 +4,8 @@ This is the Hosting Page [My Recaman-Sequence](https://64b80fa1dc48e633238ac861-
 
 ## Canvas
 ![page](https://github.com/sayanghoshofficial/Recaman-Sequence/assets/99132893/5ba695a7-83aa-41ce-9f4b-f204e0fdc6e4)
+![ezgif com-video-to-gif](https://github.com/sayanghoshofficial/Recaman-Sequence/assets/99132893/51ae1ff5-5a18-4708-90ae-b239cc4f70d1)
+
 
 
 ## Functionality
