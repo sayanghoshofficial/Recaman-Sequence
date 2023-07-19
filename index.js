@@ -26,28 +26,39 @@ function drawRecaman() {
   ctx.lineTo(CANVAS_DIMENSIONS.width, middleY);
   ctx.stroke();
 
+  let direction = 1; // Start with upward direction
+
   for (let i = 0; i < currentIndex; i++) {
     const currentX = sequence[i];
     const nextX = sequence[i + 1];
 
-    // Calculate the radius of the curve based on the difference between currentX and nextX
-    const curveRadius = Math.abs(nextX - currentX) / 2;
+    // Calculate the radius of the half circle based on the difference between currentX and nextX
+    const halfCircleRadius = Math.abs(nextX - currentX) / 2;
 
-    // Calculate the control point's X coordinate as halfway between currentX and nextX
-    const controlPointX = currentX + (nextX - currentX) / 2;
+    // Calculate the center point's X coordinate as halfway between currentX and nextX
+    const centerX = currentX + (nextX - currentX) / 2;
 
-    // Determine the control point's Y coordinate based on the current index
-    const controlPointY = middleY + (i % 2 === 0 ? -curveRadius : curveRadius);
+    // Determine the center point's Y coordinate based on the current index and direction
+    const centerY = middleY + direction * halfCircleRadius;
 
-    // Start drawing the curve
+    // Start drawing the half circle
     ctx.beginPath();
-    ctx.moveTo(currentX, middleY);
 
-    // Use quadraticCurveTo to create the curve with the calculated control point
-    ctx.quadraticCurveTo(controlPointX, controlPointY, nextX, middleY);
+    if (direction === 1) {
+      // Draw upward-facing half circle
+      ctx.arc(centerX, centerY - halfCircleRadius, halfCircleRadius, Math.PI, 0, true);
+    } else {
+      // Draw downward-facing half circle
+      ctx.arc(centerX, centerY + halfCircleRadius, halfCircleRadius, 0, Math.PI, true);
+    }
+
     ctx.stroke();
+
+    direction *= -1; // Toggle the direction for the next iteration
   }
 }
+
+
 
 rangeInput.addEventListener("input", () => {
   rangeValueDiv.textContent = rangeInput.value;
