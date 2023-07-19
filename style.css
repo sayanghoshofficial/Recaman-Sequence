@@ -9,34 +9,33 @@
   justify-content: center;
   align-items: center;
   padding: 50px;
-  
 }
 
 #canvas {
   border: 3px solid red;
   width: 70%;
 }
-#inputBox{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#inputBox {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-#rangeInput{
-    width: 50%;
-    margin-right: 10px;
+#rangeInput {
+  width: 50%;
+  margin-right: 10px;
 }
 @media only screen and (max-width: 1600px) {
-    #canvas {
-      width: 80%;
-    }
+  #canvas {
+    width: 80%;
   }
+}
 
 @media only screen and (max-width: 1400px) {
-    #canvas {
-      width: 90%;
-    }
+  #canvas {
+    width: 90%;
   }
+}
 
 @media only screen and (max-width: 1200px) {
   #canvas {
@@ -44,7 +43,7 @@
   }
 }
 @media only screen and (max-width: 400px) {
-    #rangeInput {
-      width: 100%;
-    }
+  #rangeInput {
+    width: 100%;
   }
+}

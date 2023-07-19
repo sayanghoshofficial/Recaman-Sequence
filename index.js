@@ -46,10 +46,24 @@ function drawRecaman() {
 
     if (direction === 1) {
       // Draw upward-facing half circle
-      ctx.arc(centerX, centerY - halfCircleRadius, halfCircleRadius, Math.PI, 0, true);
+      ctx.arc(
+        centerX,
+        centerY - halfCircleRadius,
+        halfCircleRadius,
+        Math.PI,
+        0,
+        true
+      );
     } else {
       // Draw downward-facing half circle
-      ctx.arc(centerX, centerY + halfCircleRadius, halfCircleRadius, 0, Math.PI, true);
+      ctx.arc(
+        centerX,
+        centerY + halfCircleRadius,
+        halfCircleRadius,
+        0,
+        Math.PI,
+        true
+      );
     }
 
     ctx.stroke();
@@ -57,8 +71,6 @@ function drawRecaman() {
     direction *= -1; // Toggle the direction for the next iteration
   }
 }
-
-
 
 rangeInput.addEventListener("input", () => {
   rangeValueDiv.textContent = rangeInput.value;
